@@ -1,0 +1,26 @@
+- **Bill Number**: H. R. 117
+- **Introduced by**: Mr. Biggs (Representative)
+- **Date Introduced**: January 9, 2023
+- **Committees**: 
+  - Oversight and Accountability
+  - Energy and Commerce
+
+- **Purpose of the Bill**:
+  - To prevent any organization receiving Federal funds from COVID relief packages from requiring employees to get a COVID-19 vaccine.
+
+- **Key Provisions**:
+  - **Funding Restriction**: 
+    - Any organization that receives funds from COVID relief cannot mandate COVID-19 vaccination for its employees.
+  - **Return of Funds**: 
+    - Organizations that violate this rule must return any funds received from the COVID relief package to the Federal Government.
+  - **Definition of COVID Relief Package**:
+    - Includes several specific laws that provided COVID-related funding, such as:
+      - CARES Act
+      - Coronavirus Preparedness and Response Supplemental Appropriations Act, 2020
+      - Families First Coronavirus Response Act
+      - Paycheck Protection Program and Health Care Enhancement Act
+      - Consolidated Appropriations Act, 2021
+      - American Rescue Plan Act of 2021
+
+- **Theoretical Context**:
+  - This bill reflects ongoing debates around vaccination mandates, personal freedom, and the role of government in public health, particularly in the context of COVID-19. Discussions on vaccine mandates have been particularly prominent due to varied public reactions to health policies during the pandemic.

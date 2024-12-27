@@ -1,0 +1,32 @@
+- **Bill Title**: America Votes Act of 2023 (H.R. 861)
+- **Introduced by**: 
+  - Mr. Larsen of Washington
+  - Mr. Veasey
+- **Date Introduced**: February 7, 2023
+- **Committee Referred to**: House Administration
+
+- **Purpose of the Bill**:
+  - The bill aims to modify the Help America Vote Act of 2002 to allow voters who need to show ID when voting to instead provide a sworn written statement attesting to their identity.
+
+- **Key Provisions**:
+  - **Section 1**: Short Title
+    - Officially named the “America Votes Act of 2023.”
+  
+  - **Section 2**: Sworn Written Statement for ID Requirements
+    - Individuals must be allowed to present a sworn written statement when voting instead of physical ID.
+      - For in-person voting: The statement must be submitted to election officials under penalty of perjury.
+      - For mail-in voting: The statement can be included with the ballot.
+    - States must prepare and distribute a pre-printed version of the statement at polling places and include it with mail-in ballots.
+    - If a sworn written statement is provided, the voter cannot be forced to use a provisional ballot.
+    - Exceptions exist for first-time voters registering by mail.
+
+- **Section 3**: Voter Information Requirement
+  - States must include information on how to provide a sworn statement in voting materials at polling places.
+
+- **Section 4**: Effective Date
+  - The changes will take effect for elections occurring on or after the bill's enactment.
+
+- **Important Notes**:
+  - The bill intends to simplify the voting process and reduce barriers for individuals who may not have the required form of identification readily available.
+
+This bill could be seen as a response to ongoing discussions about voting accessibility and the challenges some individuals face with strict ID laws, possibly reflecting broader efforts to ensure more voters can participate in elections.

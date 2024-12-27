@@ -1,0 +1,17 @@
+- **Bill Title**: H.R. 72  
+- **Purpose**: To prevent the federal government from using funds to create or maintain a database that identifies individuals who receive a COVID-19 vaccine.
+
+- **Key Provisions**:
+  - No federal funds can be spent to collect or keep information that can identify:
+    - Individuals who have received a COVID-19 vaccine.
+    
+- **Introduced by**: 
+  - Mr. Andy Biggs (Representative).
+
+- **Committee Referral**: 
+  - Referred to the Committee on Energy and Commerce.
+
+- **Important Organizations Mentioned**:
+  - Centers for Disease Control and Prevention (CDC).
+
+The bill aims to address privacy concerns regarding the tracking of individuals who receive COVID-19 vaccination. This reflects ongoing discussions in society about personal medical data, individual rights, and government involvement in health matters, especially in response to the pandemic.

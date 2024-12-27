@@ -1,0 +1,23 @@
+- **Bill Number**: H.R. 29
+- **Title**: Border Safety and Security Act of 2023
+- **Introduced on**: January 9, 2023
+- **Introduced by**: Mr. Roy and co-sponsored by several other members, including Mr. Biggs, Mr. Harris, and Mr. McClintock among others.
+  
+- **Purpose of the Bill**:
+  - Authorizes the Secretary of Homeland Security to suspend the entry of certain aliens if deemed necessary to gain control over U.S. borders.
+
+- **Key Sections**:
+  - **Section 2(a)**: 
+    - The Secretary of Homeland Security can prohibit the entry of "covered aliens" at U.S. borders if it is necessary for border control.
+  - **Section 2(b)**: 
+    - The Secretary must suspend entry if unable to detain aliens as required by immigration law.
+  - **Section 2(c)**: 
+    - Allows state attorneys general to take legal action against the Secretary of Homeland Security for violations affecting their state.
+  - **Section 2(d)**: 
+    - Defines key terms, including "covered alien" and "operational control."
+
+- **Terms Defined**:
+  - "Covered alien": Someone seeking entry who is inadmissible under U.S. immigration law.
+  - "Operational control": Standards set for border security as per previous legislation.
+
+This bill reflects ongoing discussions and actions regarding immigration and border security in the U.S. context, particularly amid concerns about illegal immigration and border management.

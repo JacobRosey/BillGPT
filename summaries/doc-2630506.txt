@@ -1,0 +1,53 @@
+- **Bill Title**: Prosecutors Need to Prosecute Act (H.R. 27)
+- **Presented by**: Ms. Nicole Malliotakis (Lead Sponsor), supported by multiple Representatives including:
+  - Mr. Guy Reschenthaler
+  - Ms. Elise Stefanik
+  - Ms. Beth Van Duyne
+  - Mr. Dan Newhouse
+  - Mr. Mike Johnson (Louisiana)
+  - Mr. John Fitzgerald
+  - Mr. Tiffany
+  - Mr. Crenshaw
+  - Mr. Issa
+  - Mr. Stauber
+  - Mr. Calvert
+  - Mrs. Debbie Lesko
+  - Mr. Joyce (Pennsylvania)
+  - Mrs. Spartz
+  - Mr. Webster (Florida)
+  - Mrs. Kat Cammack
+  - Mr. McClintock
+  - Mrs. Marjorie Greene (Georgia)
+  - Mr. Moylan
+- **Date Introduced**: January 9, 2023
+- **Committee Referred**: Committee on the Judiciary
+
+**Main Provisions**:
+- **Annual Reporting Requirement**: 
+  - District attorneys and prosecutor offices serving jurisdictions with populations of 380,000 or more must report to the Attorney General once a year.
+  - Reports must include data from the previous fiscal year covering:
+    - Total number of cases referred for prosecution.
+    - Number of cases declined for prosecution.
+    - Data regarding plea agreements (total cases, cases by initial charge, cases by conviction charge).
+    - Information on defendants with prior charges or convictions related to "covered offenses."
+    - Data on the bail status of defendants charged with covered offenses.
+
+- **Definition of Covered Offenses**: Includes serious crimes such as:
+  - Murder or non-negligent manslaughter
+  - Forcible rape
+  - Robbery
+  - Aggravated assault
+  - Burglary
+  - Larceny
+  - Motor vehicle theft
+  - Arson
+  - Firearm offenses (illegal use/possession)
+
+- **Standards and Publication**:
+  - The Attorney General will establish uniform standards for report submissions.
+  - The collected information will be submitted to the Senate and House Judiciary Committees and published publicly.
+
+**Context and Theories**:
+- This bill may respond to concerns about crime rates and prosecution efficiency in larger jurisdictions.
+- It emphasizes accountability for district attorneys and could be seen as an effort to address perceptions of leniency in the justice system regarding serious crimes.
+- The push for comprehensive reporting aligns with national conversations about crime, safety, and law enforcement transparency.

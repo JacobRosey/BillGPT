@@ -1,0 +1,15 @@
+- **Bill Number and Title**: H.R. 100 - "No SmartPay for Anti-2A Companies Act"
+- **Introduced By**: 
+  - Mr. Andy Biggs
+  - Mr. Scott Perry
+  - Mrs. Mary Miller of Illinois
+- **Date Introduced**: January 9, 2023
+- **Committee**: Referred to the Committee on Oversight and Accountability
+- **Main Purpose**:
+  - To stop the Administrator of General Services from awarding contracts for specific commercial payment systems under the SmartPay Program.
+- **Key Provision**:
+  - The bill prohibits contracts for payment systems that use a payment processing agency which has a merchant category code for gun retailers.
+- **Exclusion**:
+  - The prohibition does not apply to any contracts that were awarded before the bill was enacted. 
+
+This bill reflects ongoing discussions around gun rights and the financial institutions that serve the gun industry, indicating a move by some lawmakers to protect businesses related to firearms.

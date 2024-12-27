@@ -108,9 +108,10 @@ app.post('/get-bill-data', async (req, res) => {
         // This becomes increasingly inefficient as we read deeper into the csv
         // i.e. if rowStart is 10,000, we have to skip 9,999 rows until we reach 
         // the rows we care about. Should just load csv rows into main memory so we
-        // can use array indices for O(1) access. A real application would just use 
-        // a database but I don't want to. CSV should be good enough here 
-        // as there are only ~20k rows
+        // can use array indices for O(1) access.
+        
+        // I could also use the csv files as they were intended and load them into a database
+        // but that would just make too much sense
         for await (const row of stream) {
             if (currentRow >= rowStart) {
                 let bill = {

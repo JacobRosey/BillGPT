@@ -1,0 +1,23 @@
+- **Bill Number**: H. R. 93
+- **Introduced by**: Mr. Biggs
+- **Introduced on**: January 9, 2023
+- **Committee**: Referred to the Committee on the Judiciary
+- **Short Title**: Protecting Businesses From Frivolous COVID Lawsuits Act of 2023
+
+- **Purpose**: 
+  - To establish specific jury instructions in federal civil cases that involve claims of negligence related to the transmission of COVID-19.
+
+- **Key Provisions**:
+  - In cases alleging negligence due to COVID-19 transmission:
+    1. The jury must use the reasonable person standard to determine negligence.
+    2. A person is considered negligent if they either:
+       - Do something a reasonably careful person wouldn’t do, or 
+       - Fail to do something a reasonably careful person would do in the same situation.
+    3. Just opening a business is deemed reasonable by law.
+    4. Negligence cannot be solely based on a business being open.
+
+- **Implications**:
+  - This bill aims to protect businesses from lawsuits claiming negligence related to COVID-19, suggesting that merely being in operation does not imply fault or danger.
+
+- **Context**: 
+  - The bill appears to respond to concerns from business owners about potential lawsuits stemming from the pandemic, as many such lawsuits could be perceived as "frivolous" or unfounded under the established guidelines.

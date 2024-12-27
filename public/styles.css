@@ -39,6 +39,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  margin: 0px;
 }
 
 .bill-item:hover {
@@ -51,15 +52,16 @@ h2 {
 
 button {
   padding: 5px 10px;
-  margin: 0 5px;
+  margin: 0px 10px;
   font-size: 14px;
   height: 40px;
+  min-width: 120px;
   background-color: #007BFF;
   color: white;
   border: none;
   cursor: pointer;
   font-weight: bold;
-  margin-left: auto;
+  border-radius: 5px;
 }
 
 button:hover {
@@ -79,14 +81,21 @@ button:hover {
 }
 
 .summary-item {
-  display: none;
+  display: block;
+  max-height: 0; /* Start with zero height */
+  opacity: 0; /* Initially hidden */
   margin-top: 10px;
   padding: 10px;
   font-size: 14px;
   background-color: #f8f9fa;
   border-top: 1px solid #eee;
+  overflow: hidden; /* Hide overflowing content */
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out; /* Smooth transitions */
 }
 
 .summary-item.show {
-  display: block;
+  max-height: 1000px; /* Arbitrary large value, enough to fit your content */
+  opacity: 1; /* Fade in */
 }
+
+

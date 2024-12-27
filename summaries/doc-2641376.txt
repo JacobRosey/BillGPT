@@ -1,0 +1,33 @@
+- **Bill Title**: Pregnant Women Health and Safety Act of 2023
+- **Bill Number**: H.R. 116
+- **Introduced by**: Mr. Biggs
+- **Date Introduced**: January 9, 2023
+- **Committees Involved**: 
+  - Committee on the Judiciary
+  - Committee on Energy and Commerce
+
+- **Main Purpose**: 
+  - To amend title 18 of the United States Code to prohibit certain abortion procedures.
+
+- **Key Sections**:
+  - **Section 1**: Short Title
+    - The act may be referred to as the "Pregnant Women Health and Safety Act of 2023".
+  
+  - **Section 2**: Requirements for Physicians Performing Abortions
+    - **Definitions**: Clarifies who qualifies as a "physician".
+    - **Physician Requirements**:
+      - Must have admitting privileges at a hospital within 15 miles of their practice location.
+      - Must inform patients where they can receive follow-up care post-abortion.
+    - **Legal Penalties**: Physicians who do not comply can be fined, imprisoned for up to two years, or both.
+    - **Protection for Women**: Women undergoing the procedure cannot be prosecuted under this section.
+
+  - **Section 3**: Requirements for Abortion Clinics
+    - To receive federal funds, clinics must be:
+      - State-licensed.
+      - Compliant with ambulatory surgery center requirements.
+    - State health boards may waive some structural requirements for clinics.
+
+- **Defining "Abortion Clinic"**: 
+  - A facility where abortions are performed, excluding hospitals and ambulatory surgery centers.
+
+This bill reflects ongoing debates around abortion laws in the U.S., especially in light of recent Supreme Court decisions that have challenged or changed the legal framework for abortion rights. The focus on regulations concerning physicians and clinics might be an effort to enhance safety standards or to impose stricter operational guidelines for abortion services.

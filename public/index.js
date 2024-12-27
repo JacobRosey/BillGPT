@@ -25,10 +25,6 @@ async function fetchBills(page) {
     for (const bill of bills) { 
       const summarized = await isSummarized(bill.id);
 
-      if(summarized){
-        console.log(summarized)
-      }
-
       const billItem = document.createElement('div');
       billItem.setAttribute('id', bill.id);
       billItem.classList.add('bill-item');
@@ -42,11 +38,11 @@ async function fetchBills(page) {
       const button = document.createElement('button');
       if (!summarized) {
         button.textContent = 'Summarize';
-        button.addEventListener('click', () => summarizeBill(bill.id));
+        button.onclick = () => summarizeBill(bill.id);
       } else {
         button.textContent = 'View Summary';
         button.style.backgroundColor = 'green';
-        button.addEventListener('click', () => renderSummary(bill.id, summarized));
+        button.onclick = () => renderSummary(bill.id, summarized);
       }
 
       billContent.appendChild(titleSpan);
@@ -151,15 +147,22 @@ async function summarizeBillText(docId) {
 }
 
 async function summarizeBill(billId) {
-  try {
-    const docId = await fetchDocId(billId); 
-    if(docId == 'Bill already summarized'){
-      return alert(docId)
-    }
-    const result = await summarizeBillText(docId); 
+  const bill = document.getElementById(billId);
+  const btn = bill.querySelector('button');
+  btn.disabled = true;
+  btn.style.backgroundColor = '#cc5500';
+  btn.innerHTML = "Processing...";
 
-    if (typeof result == 'object') {
-      renderSummary(billId, result.content)
+  try {
+    const docId = await fetchDocId(billId);
+    if (docId === 'Bill already summarized') {
+      return alert(docId);
+    }
+
+    const result = await summarizeBillText(docId);
+
+    if (typeof result === 'object') {
+      renderSummary(billId, result.content);
     } else {
       alert(result); // Do better error handling here
     }
@@ -171,19 +174,57 @@ async function summarizeBill(billId) {
 function renderSummary(id, content) {
   const bill = document.getElementById(id);
   const summaryItem = bill.querySelector('.summary-item');
+  const btn = bill.querySelector('button');
+  const billList = document.querySelector('.bill-list'); // The scrollable container
+
+  // Overwrite previous click listener
+  btn.onclick = () => hideSummary(id);
+
+  btn.innerHTML = 'Hide Summary';
+  btn.style.backgroundColor = '#9B59B6';
+
+   // Scroll the .bill-list container to bring the summary into view
+   const billPosition = bill.offsetTop; 
+ 
+   // Smoothly scroll the container
+   billList.scrollTo({
+     top: billPosition - 185,
+     behavior: 'smooth',
+   });
 
   if (bill) {
     summaryItem.classList.add('show');
     summaryItem.innerHTML = convertMarkdownToHtml(content);
   }
+
+  btn.disabled = false;
 }
 
 function convertMarkdownToHtml(text) {
   return text.split('\n').map(line => {
     // Convert "**Text**" to "<strong>Text</strong>"
-    return line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    line = line.replace(/^### (.*)/, '<h3>$1</h3>');
+    line = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    return line
   }).join('<br>');
 }
+
+function hideSummary(id) {
+  const bill = document.getElementById(id);
+  const summaryItem = bill.querySelector('.summary-item');
+  const btn = bill.querySelector('button');
+
+  btn.innerHTML = 'View Summary';
+  btn.style.backgroundColor = 'green';
+
+  // Add the event listener for showing the summary again
+  btn.onclick = () => renderSummary(id, summaryItem.innerHTML);
+
+  if (summaryItem) {
+    summaryItem.classList.remove('show');
+  }
+}
+
 
 // Fetch bills on page load
 fetchBills(page);
