@@ -1,0 +1,42 @@
+- **Bill Title:** Close the Medigap Act of 2023
+- **Introduced by:** 
+  - Mr. Doggett (and co-sponsored by numerous representatives including Mr. Bishop of Georgia, Mr. Blumenauer, Ms. Ocasio-Cortez, among others)
+- **Date Introduced:** January 9, 2023
+- **Referrals:** Committee on Ways and Means and Committee on Energy and Commerce
+
+### Summary of Key Provisions:
+1. **Guaranteed Issue:**
+   - Insurance companies cannot deny Medicare supplemental policies based on health status or pre-existing conditions.
+   - Policies must be available to individuals without excluding benefits or imposing waiting periods.
+
+2. **Outreach Plan:**
+   - The Secretary of Health and Human Services (HHS) must develop a plan to inform beneficiaries about changes.
+   - The plan will involve consultation with consumer advocates, insurance brokers, and relevant organizations.
+
+3. **Effective Date:**
+   - Changes to Medicare supplemental policies will start on January 1, 2024.
+   - Implementation can be phased in over a maximum of five years, fully completed by January 1, 2029.
+
+4. **Medical Loss Ratio:**
+   - Requirement for insurance companies to spend a specified percentage of premiums on medical care (75% for group policies and 65% for individual policies) will be periodically reviewed.
+
+5. **Limitations on Pricing Discrimination:**
+   - New standards to prevent discrimination in pricing based on age or health status.
+   - Changes to apply to policies effective from January 1, 2024.
+
+6. **Medicare Plan Finder Website:**
+   - Improvements will be made to help beneficiaries access information on providers, costs, and policy comparisons.
+   - Reviews and updates of the website to ensure clarity and usefulness for consumers.
+
+7. **Restoration of First-Dollar Coverage:**
+   - Removal of previous limitations to allow more comprehensive coverage options under Medigap plans.
+
+8. **Broker Transparency:**
+   - Brokers of Medigap insurance must report payments or transfers of value they receive annually for transparency.
+
+### Important Organizations Involved:
+- **National Association of Insurance Commissioners** - consulted on pricing standards and regulations regarding supplemental insurance.
+- **Centers for Medicare & Medicaid Services** - responsible for updating and maintaining the Medicare plan finder website.
+
+### Context:
+This bill aims to make Medicare supplemental insurance more accessible and affordable for individuals, particularly those with pre-existing conditions. The changes reflect ongoing discussions in Congress regarding healthcare reform and improving the quality of care for Medicare recipients, especially in light of increasing healthcare costs and emphasis on consumer rights.

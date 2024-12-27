@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bill-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: white;
+}
+
+.bill-item {
+  margin: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* New wrapper div for title and button */
+.bill-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.bill-item:hover {
+  background-color: #f9f9f9;
+}
+
+.bill-item span {
+  font-weight: bold;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 14px;
+  height: 40px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.loading {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  display: none;
+  margin-top: 20px;
+}
+
+#title-text {
+  margin: 40px;
+}
+
+.summary-item {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #eee;
+}
+
+.summary-item.show {
+  display: block;
+}
