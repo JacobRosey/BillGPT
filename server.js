@@ -4,7 +4,8 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import csv from 'csv-parser';
-import getSummarizedBill from './legiscan.js';
+import getBillText from './apis/legiscan.js';
+import getBillSummary from './apis/openai.js'
 
 const app = express();
 const port = 1776;
@@ -86,7 +87,8 @@ app.post('/summarize-bill', async (req, res) => {
             return res.status(400).send(JSON.stringify('Doc ID is required'));
         }
 
-        const summary = await getSummarizedBill(docId)
+        const billText = await getBillText(docId)
+        const summary = await getBillSummary(billText);
         // Save the summary to a file
         fs.writeFile(`./summaries/doc-${docId}.txt`, summary.content, function (err) {
             if (err) {
