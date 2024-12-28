@@ -1,11 +1,10 @@
 // Set up global variables
 let page = 0;
-const billsPerPage = 20;
+const billsPerPage = 30;
 const billListElement = document.getElementById('billList');
 const loadingElement = document.getElementById('loading');
 
 var billIdArr = [];
-var docIdArr = [];
 
 // Check if bill has already been summarized (should know if summary exists when receiving from backend)
 // and if so change button to 'view summary' and render it
@@ -13,7 +12,7 @@ async function fetchBills(page) {
   loadingElement.style.display = 'block';
   try {
     const rowStart = (page * billsPerPage);
-    const response = await fetch('http://localhost:6969/get-bill-data', {
+    const response = await fetch('http://localhost:1776/get-bill-data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -37,11 +36,12 @@ async function fetchBills(page) {
 
       const button = document.createElement('button');
       if (!summarized) {
-        button.textContent = 'Summarize';
-        button.onclick = () => summarizeBill(bill.id);
+        button.classList.add('summarizable-btn')
+        button.textContent = 'Get Summary';
+        button.onclick = () => handleGetSummary(bill.id);
       } else {
         button.textContent = 'View Summary';
-        button.style.backgroundColor = 'green';
+        button.classList.add('summarized-btn');
         button.onclick = () => renderSummary(bill.id, summarized);
       }
 
@@ -79,7 +79,7 @@ billListElement.addEventListener('scroll', () => {
 // Function to simulate summarizing a bill with ChatGPT
 async function fetchDocId(billId) {
   try {
-    const response = await fetch('http://localhost:6969/get-doc-id', {
+    const response = await fetch('http://localhost:1776/get-doc-id', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ async function fetchDocId(billId) {
 
 async function isSummarized(billId){
   try {
-    const response = await fetch('http://localhost:6969/get-existing-summaries', {
+    const response = await fetch('http://localhost:1776/get-existing-summaries', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -120,7 +120,7 @@ async function isSummarized(billId){
 
 async function summarizeBillText(docId) {
   try {
-    const response = await fetch('http://localhost:6969/summarize-bill', {
+    const response = await fetch('http://localhost:1776/summarize-bill', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -146,15 +146,17 @@ async function summarizeBillText(docId) {
   }
 }
 
-async function summarizeBill(billId) {
+async function handleGetSummary(billId) {
   const bill = document.getElementById(billId);
-  const btn = bill.querySelector('button');
-  btn.disabled = true;
-  btn.style.backgroundColor = '#cc5500';
-  btn.innerHTML = "Processing...";
+  const button = bill.querySelector('button');
+  button.disabled = true;
+  button.classList.remove('summarizable-btn')
+  button.classList.add('summarizing-btn')
+  button.innerHTML = "Processing...";
 
   try {
     const docId = await fetchDocId(billId);
+    //not working
     if (docId === 'Bill already summarized') {
       return alert(docId);
     }
@@ -167,28 +169,47 @@ async function summarizeBill(billId) {
       alert(result); // Do better error handling here
     }
   } catch (error) {
-    console.error('Error occurred in summarizeBill:', error);
+    console.error('Error occurred in handleGetSummary:', error);
+  }
+}
+
+function hideSummary(id) {
+  const bill = document.getElementById(id);
+  const summaryItem = bill.querySelector('.summary-item');
+  const button = bill.querySelector('button');
+
+  button.innerHTML = 'View Summary';
+  button.classList.remove('rendered-summary-btn')
+  button.classList.add('summarized-btn')
+
+  // Add the event listener for showing the summary again
+  button.onclick = () => renderSummary(id, summaryItem.innerHTML);
+
+  if (summaryItem) {
+    summaryItem.classList.remove('show');
   }
 }
 
 function renderSummary(id, content) {
   const bill = document.getElementById(id);
   const summaryItem = bill.querySelector('.summary-item');
-  const btn = bill.querySelector('button');
+  const button = bill.querySelector('button');
   const billList = document.querySelector('.bill-list'); // The scrollable container
 
   // Overwrite previous click listener
-  btn.onclick = () => hideSummary(id);
+  button.onclick = () => hideSummary(id);
 
-  btn.innerHTML = 'Hide Summary';
-  btn.style.backgroundColor = '#9B59B6';
+  button.innerHTML = 'Hide Summary';
+  button.classList.remove('summarized-btn')
+  button.classList.remove('summarizing-btn')
+  button.classList.add('rendered-summary-btn');
 
    // Scroll the .bill-list container to bring the summary into view
    const billPosition = bill.offsetTop; 
  
    // Smoothly scroll the container
    billList.scrollTo({
-     top: billPosition - 185,
+     top: billPosition - 90,
      behavior: 'smooth',
    });
 
@@ -197,7 +218,7 @@ function renderSummary(id, content) {
     summaryItem.innerHTML = convertMarkdownToHtml(content);
   }
 
-  btn.disabled = false;
+  button.disabled = false;
 }
 
 function convertMarkdownToHtml(text) {
@@ -208,23 +229,6 @@ function convertMarkdownToHtml(text) {
     return line
   }).join('<br>');
 }
-
-function hideSummary(id) {
-  const bill = document.getElementById(id);
-  const summaryItem = bill.querySelector('.summary-item');
-  const btn = bill.querySelector('button');
-
-  btn.innerHTML = 'View Summary';
-  btn.style.backgroundColor = 'green';
-
-  // Add the event listener for showing the summary again
-  btn.onclick = () => renderSummary(id, summaryItem.innerHTML);
-
-  if (summaryItem) {
-    summaryItem.classList.remove('show');
-  }
-}
-
 
 // Fetch bills on page load
 fetchBills(page);

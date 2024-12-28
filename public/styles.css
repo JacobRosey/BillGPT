@@ -7,8 +7,16 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  padding: 20px;
 }
+
+.title-text {
+  text-align: center;
+}
+
+.title-text body{
+  padding: 5px;
+}
+
 
 .container {
   max-width: 1000px;
@@ -17,11 +25,11 @@ body {
 
 h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 15px;
 }
 
 .bill-list {
-  max-height: 400px;
+  height: 500px;
   overflow-y: auto;
   border: 1px solid #ccc;
   padding: 10px;
@@ -51,12 +59,12 @@ h2 {
 }
 
 button {
-  padding: 5px 10px;
-  margin: 0px 10px;
+  padding: 5px;
+  margin: 5px;
+  margin-left: 8px;
   font-size: 14px;
   height: 40px;
   min-width: 120px;
-  background-color: #007BFF;
   color: white;
   border: none;
   cursor: pointer;
@@ -64,9 +72,39 @@ button {
   border-radius: 5px;
 }
 
-button:hover {
+.summarizable-btn {
+  background-color: green;
+}
+
+.summarizable-btn:hover {
+  background-color: darkgreen;
+}
+
+.summarized-btn {
+  background-color: #007BFF;
+}
+
+.summarized-btn:hover {
   background-color: #0056b3;
 }
+
+.summarizing-btn {
+  background-color: #cc5500;
+}
+
+.summarizing-btn:hover{
+  cursor: wait;
+}
+
+.rendered-summary-btn {
+  background-color: #9B59B6;
+}
+
+.rendered-summary-btn:hover {
+  background-color: #8A47A3;
+}
+
+
 
 .loading {
   text-align: center;
@@ -76,16 +114,11 @@ button:hover {
   margin-top: 20px;
 }
 
-#title-text {
-  margin: 40px;
-}
-
 .summary-item {
   display: block;
   max-height: 0; /* Start with zero height */
   opacity: 0; /* Initially hidden */
-  margin-top: 10px;
-  padding: 10px;
+  padding: 5px;
   font-size: 14px;
   background-color: #f8f9fa;
   border-top: 1px solid #eee;
@@ -94,8 +127,12 @@ button:hover {
 }
 
 .summary-item.show {
-  max-height: 1000px; /* Arbitrary large value, enough to fit your content */
+  max-height: 2000px; /* Arbitrary large value, enough to fit your content */
   opacity: 1; /* Fade in */
+}
+
+a{
+  color: #0056b3;
 }
 
 

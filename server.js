@@ -7,7 +7,7 @@ import csv from 'csv-parser';
 import getSummarizedBill from './legiscan.js';
 
 const app = express();
-const port = 6969;
+const port = 1776;
 
 app.use(express.json());
 
@@ -37,7 +37,7 @@ app.post('/get-existing-summaries', async (req, res) => {
         }
     } catch (err) {
         console.error(err);
-        res.status(500).json({ message: 'Error processing request' });
+        return res.status(500).json({ message: 'Error processing request' });
     }
 });
 
@@ -45,16 +45,21 @@ app.post('/get-existing-summaries', async (req, res) => {
 app.post('/get-doc-id', async (req, res) => {
     try {
         const { billId } = req.body;
+        // In case another user summarized the same bill after this user's page was rendered?
+        // not currently doing anything
         if (fs.existsSync(`./summaries/bill-${billId}`)) {
-            return res.status(200).send('Bill already summarized');
+            return res.status(200).send("Bill already summarized")
+            // const docId = fs.readFileSync(`./summaries/bill-${billId}`, 'utf-8');
+            // const summary = fs.readFileSync(`./summaries/doc-${docId}`, 'utf-8');
+            // console.log(summary)
+            // return res.status(200).send(JSON.stringify(summary));
         } 
         const stream = fs.createReadStream('./csv_files/document_ids.csv')
             .pipe(csv());
         for await (const row of stream) {
             if(billId > row.billId){
                 //May not work if csv is not parsed in order... i think it is though
-                res.status(400).send(`Legiscan does not have bill text for bill id ${billId}`)
-                return;
+                return res.status(400).send(`Legiscan does not have bill text for bill id ${billId}`)
             }
             if (billId == row.bill_id) {
                 fs.writeFile(`./summaries/bill-${billId}.txt`, row.document_id, function (err) {
@@ -62,7 +67,7 @@ app.post('/get-doc-id', async (req, res) => {
                         return res.status(500).send('Error saving the summarized bill');
                     }
                 });
-                res.status(200).send(JSON.stringify(Number(row.document_id))) 
+                return res.status(200).send(JSON.stringify(Number(row.document_id))) 
             }
         }
     }catch (error) {
@@ -88,11 +93,11 @@ app.post('/summarize-bill', async (req, res) => {
                 return res.status(500).send('Error saving the summarized bill');
             }
             // respond with the actual bill text here (summary.content)
-            res.status(200).send(JSON.stringify(summary));
+            return res.status(200).send(JSON.stringify(summary));
         });
     } catch (error) {
         console.error(error);
-        res.status(500).send('Internal server error');
+        return res.status(500).send('Internal server error');
     }
 });
 
@@ -106,7 +111,7 @@ app.post('/get-bill-data', async (req, res) => {
             .pipe(csv());
 
         // This becomes increasingly inefficient as we read deeper into the csv
-        // i.e. if rowStart is 10,000, we have to skip 9,999 rows until we reach 
+        // i.e. if rowStart is 10,000, we have to read past 9,999 rows until we reach 
         // the rows we care about. Should just load csv rows into main memory so we
         // can use array indices for O(1) access.
         
@@ -128,10 +133,10 @@ app.post('/get-bill-data', async (req, res) => {
             currentRow++;
         }
         console.log(billsArr)
-        res.status(200).send(JSON.stringify(billsArr))
+        return res.status(200).send(JSON.stringify(billsArr))
     } catch (error) {
         console.error(error);
-        res.status(500).send('Error retrieving bill data')
+        return res.status(500).send('Error retrieving bill data')
     }
 })
 
